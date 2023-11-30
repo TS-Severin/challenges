@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: ghostwhite;
+  background-color: whitesmoke;
 }
 
 article {
@@ -13,7 +13,7 @@ article {
   margin: 10px;
   border-radius: 15px;
   padding: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
 }
 
 img {
@@ -22,4 +22,19 @@ img {
 
 h2 {
   padding: 15px 10px 10px 0px;
+}
+
+p {
+  padding: 5px 5px 5px 0px;
+}
+
+#handle {
+  color: grey;
+}
+
+button {
+  padding: 5px 5px 5px 0px;
+  color: blue;
+  border: none;
+  background-color: white;
 }
