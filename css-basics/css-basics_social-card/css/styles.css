@@ -1,3 +1,44 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+article {
+  background-color: white;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 30px;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+img {
+  border-radius: 15px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+h2 {
+  padding: 15px 10px 10px 0px;
+}
+
+p {
+  padding: 5px 5px 5px 0px;
+}
+
+#handle {
+  color: grey;
+}
+
+button {
+  padding: 5px 5px 5px 0px;
+  color: rgb(0, 102, 255);
+  border: none;
+  background-color: white;
 }
