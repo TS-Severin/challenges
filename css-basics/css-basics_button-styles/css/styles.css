@@ -55,6 +55,16 @@ button {
 
 .button3 {
   /*Style me! You can test out changing the font, or font size, ...*/
+  background-color: #c8a951;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.button3:active {
+  background-color: #fdefb2;
 }
 
 .button4 {
