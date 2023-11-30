@@ -35,15 +35,12 @@ h2 {
 - Center the text of the heading
 */
 
-h1 {
-  background-color: white;
-  margin-top: 0;
-  padding: 10px,
-  text-align: center;
-}
-
 .title {
   /* your solution */
+  background-color: white;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 /* ------- Sections ------- */
