@@ -69,6 +69,14 @@ button {
 
 .button4 {
   /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
+  border: black solid 1px;
+  background-color: lime;
+  color: lime;
+}
+
+.button4:hover {
+  color: black;
+  box-shadow: 150px 15px 20px yellowgreen;
 }
 
 /* Feel free to play around with other properties, as well. */
