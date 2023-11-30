@@ -20,6 +20,10 @@ img {
   border-radius: 15px;
 }
 
+.title {
+  text-transform: uppercase;
+}
+
 h2 {
   padding: 15px 10px 10px 0px;
 }
@@ -34,7 +38,7 @@ p {
 
 button {
   padding: 5px 5px 5px 0px;
-  color: blue;
+  color: rgb(0, 102, 255);
   border: none;
   background-color: white;
 }
