@@ -272,5 +272,37 @@ width, etc. */
 /* Media Query Desktop */
 /* --- */
 
+/* put the forest-image .product-card --forest to the whole width of the screen and makes it higher (500px) */
+
+@media screen and (min-width: 1200px) {
+  .product-card.--forest {
+    width: 100vw;
+    height: 500px;
+  }
+
+  /* makes the body slim or to put it in another way adds the green background left and right and centers the content 
+  it inherits the row-wrap from the defintions above for tablet */
+
+  body,
+  .main-header,
+  .navbar {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* kills the padding between forest-image and header */
+
+  .main-content {
+    padding-top: 0;
+  }
+
+  /* kills shadows of the forest behind the header, adds padding between main-section and footer */
+
+  .card-section {
+    overflow-x: hidden;
+    padding-bottom: 50px;
+  }
+}
+
 /* Replace this comment with your media query. */
 /* --- */
