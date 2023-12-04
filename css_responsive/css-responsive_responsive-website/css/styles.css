@@ -247,7 +247,30 @@ width, etc. */
 /* Replace this comment with your media query. */
 /* --- */
 
+@media screen and (min-width: 800px) {
+  /* makes images round about half size of the screen to allow them be smaller */
+
+  .card-section > * {
+    width: 45%;
+  }
+
+  /* make the images which arrived at the breakpoint in a smaller version wrap in a row and be in center */
+
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* puts intro text at the top of box not in the center as in wireframe */
+
+  p.intro-text {
+    align-self: flex-start;
+  }
+}
+
 /* Media Query Desktop */
 /* --- */
+
 /* Replace this comment with your media query. */
 /* --- */
