@@ -37,8 +37,6 @@ ul {
   padding: 20px;
   color: var(--black-light);
   background-color: var(--grey-light);
-  display: flex;
-  justify-content: space-between;
 }
 
 .navigation__link {
@@ -50,4 +48,5 @@ ul {
 
 .navigation__menu {
   display: flex;
+  justify-content: space-between;
 }
