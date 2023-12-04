@@ -44,6 +44,8 @@ main {
 
 .box--top-center {
   background-color: #85c1e9;
+  position: absolute;
+  left: 210px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -51,12 +53,16 @@ main {
 
 .box--top-right {
   background-color: #5dade2;
+  position: absolute;
   top: 0;
   right: 0;
 }
 
 .box--center {
   background-color: #3498db;
+  position: absolute;
+  top: 280px;
+  right: 210px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -64,12 +70,17 @@ main {
 
 .box--bottom-left {
   background-color: #2874a6;
+  position: absolute;
+  top: 518px;
   bottom: 0;
   left: 0;
 }
 
 .box--bottom-center {
   background-color: #21618c;
+  position: absolute;
+  top: 518px;
+  left: 210px;
   bottom: 0;
   left: 50%;
   right: 50%;
@@ -78,6 +89,9 @@ main {
 
 .box--bottom-right {
   background-color: #1b4f72;
+  position: absolute;
+  top: 518px;
+  left: 420px;
   bottom: 0;
   right: 0;
 }
