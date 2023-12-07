@@ -11,6 +11,12 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const title = "random post";
+const text = "the coffee tastes good today";
+let numberOfLikes = 0;
+const creator = "tillmann";
+const isReported = false;
+
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +24,23 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+
+console.log(
+  "title:",
+  title,
+  '"',
+  text,
+  '"',
+  "Number of likes: ",
+  numberOfLikes,
+  "Posted by: ",
+  creator,
+  "Reported:",
+  isReported
+);
+
+numberOfLikes++;
+
+console.log("Likes:", numberOfLikes);
 
 // --^-- write your code here --^--
