@@ -1,6 +1,6 @@
 console.clear();
 
-const operand1 = 12;
+const operand1 = 2;
 const operand2 = 4;
 
 /*
