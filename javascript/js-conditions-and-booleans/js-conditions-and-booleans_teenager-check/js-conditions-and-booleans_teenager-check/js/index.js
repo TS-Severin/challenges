@@ -7,6 +7,12 @@ button.addEventListener("click", () => {
   // Beware: input values are *always* strings!
   const age = Number(input.value);
 
+  if (age >= 10 && age < 20) {
+    output.innerHTML = "You are a teen."; // I have to admit: I've stolen this .innerHTML property from Yuval's solution ...
+  } else {
+    output.innerHTML = "You are not a teen.";
+  }
+
   // Exercise:
   // Use conditions and the logical AND operator to write
   // "You are a teen." or "You are not a teen." into the output.
