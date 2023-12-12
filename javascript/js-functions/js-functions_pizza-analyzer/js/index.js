@@ -18,6 +18,10 @@ pizzaInput1.addEventListener("input", () => {
 
 pizzaInput2.addEventListener("input", () => {
   // write your code here
+  const pizzaSize1 = pizzaInput1.value; // I needed Javiers solution again to understand ".value"
+  const pizzaSize2 = pizzaInput2.value;
+
+  calculatePizzaGain(PizzaSize1, PizzaSize2);
 });
 
 // Task 1
