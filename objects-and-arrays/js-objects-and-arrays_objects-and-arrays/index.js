@@ -52,6 +52,7 @@ const people = [
 
 const nameOfFirstPerson = people[0].name;
 console.log(people[0].name);
+console.log(nameOfFirstPerson);
 
 // EXERCISE 2
 // Change the value of the variable homersOtherFriends to equal the other friends of Homer.
