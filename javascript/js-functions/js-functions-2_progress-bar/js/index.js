@@ -22,28 +22,31 @@ For that:
 const progressBar = document.querySelector('[data-js="progress-bar"]');
 
 document.body.addEventListener('scroll', ()) => {
-    updateProgressbarWidth();
-  
+
+//   updateProgressbarWidth();
+
 }
 
-function updateProgressbarWidth() {
-const calculateScrollPercentage() = progress-bar.width;
-}
+console.log(window.innerHeight);
+console.log(document.body.clientHeight);
 
-function calculateScrollPercentage() {
-  const scrollHeightOnePercent = (document.body.clientHeight - window.innerHeight) / 100;
-  return Math.round(window.scrollY / scrollHeightOnePercent);
-}
+// function updateProgressbarWidth() {
+// const calculateScrollPercentage() = progress-bar.width;
+// }
 
+// function calculateScrollPercentage() {
+//   const scrollHeightOnePercent = (document.body.clientHeight - window.innerHeight) / 100;
+//   return Math.round(window.scrollY / scrollHeightOnePercent);
+// }
 
-const progressBar = document.querySelector('[data-js="progress-bar"]');
+// const progressBar = document.querySelector('[data-js="progress-bar"]');
 
-document.body.addEventListener('scroll', () => {
-  const scrollPercentage = calculateScrollPercentage();
-  progressBar.style.width = `${scrollPercentage}%`;
-});
+// document.body.addEventListener('scroll', () => {
+//   const scrollPercentage = calculateScrollPercentage();
+//   progressBar.style.width = `${scrollPercentage}%`;
+// });
 
-function calculateScrollPercentage() {
-  const scrollHeightOnePercent = (document.body.clientHeight - window.innerHeight) / 100;
-  return (window.scrollY / scrollHeightOnePercent).toFixed(2); // Using toFixed to limit decimal places
-}
+// function calculateScrollPercentage() {
+//   const scrollHeightOnePercent = (document.body.clientHeight - window.innerHeight) / 100;
+//   return (window.scrollY / scrollHeightOnePercent).toFixed(2); // Using toFixed to limit decimal places
+// }
