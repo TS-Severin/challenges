@@ -16,3 +16,13 @@ For further information check MDN:
 - about CSS declarations with "style": https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
 
 */
+
+const colorRange = document.querySelector('[data-js="input-color"]');
+const radiusRange = document.querySelector('[data-js="input-radius"]');
+const rotationRange = document.querySelector('[data-js="input-rotation"]');
+
+colorRange.addEventListener("input", (event) => {});
+
+radiusRange.addEventListener("input", (event) => {});
+
+rotationRange.addEventListener("input", (event) => {});
