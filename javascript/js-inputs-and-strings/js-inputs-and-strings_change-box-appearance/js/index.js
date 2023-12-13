@@ -20,9 +20,16 @@ For further information check MDN:
 const colorRange = document.querySelector('[data-js="input-color"]');
 const radiusRange = document.querySelector('[data-js="input-radius"]');
 const rotationRange = document.querySelector('[data-js="input-rotation"]');
+const box = document.querySelector('[data-js="box"]');
 
-colorRange.addEventListener("input", (event) => {});
+colorRange.addEventListener("input", (event) => {
+  const colorValue = colorRange.value;
+  box.style.backgroundColor = `hsl(${colorValue}, 50%, 50%)`;
+});
 
-radiusRange.addEventListener("input", (event) => {});
+radiusRange.addEventListener("input", (event) => {
+  const borderValue = radiusRange.value * 2;
+  box.style.borderRadius = `${borderValue}px`;
+});
 
 rotationRange.addEventListener("input", (event) => {});
