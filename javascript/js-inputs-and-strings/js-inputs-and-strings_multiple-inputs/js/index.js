@@ -29,3 +29,10 @@ const button = document.querySelector("[data-js=button]");
 // });
 
 // 3.
+
+button.addEventListener("click", () => {
+  const firstLine = firstInput.value;
+  const secondLine = secondInput.value;
+  firstInput.value = secondLine;
+  secondInput.value = firstLine;
+});
