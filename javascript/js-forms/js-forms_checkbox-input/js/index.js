@@ -22,6 +22,10 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
+// hide error in the first place
+
+hideTosError();
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
