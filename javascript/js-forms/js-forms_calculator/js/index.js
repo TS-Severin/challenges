@@ -26,7 +26,28 @@ form.addEventListener("submit", (event) => {
 
   // --v-- write your code here --v--
 
+  const numberA = parseFloat(form.numberA.value);
+  const numberB = parseFloat(form.numberB.value);
+
+  if (form.addition.checked) {
+    result = add(numberA, numberB);
+  }
+
+  if (form.subtraction.checked) {
+    result = subtract(numberA, numberB);
+  }
+
+  if (form.multiplication.checked) {
+    result = multiply(numberA, numberB);
+  }
+
+  if (form.division.checked) {
+    result = divide(numberA, numberB);
+  }
+
   // --^-- write your code here --^--
 
   resultOutput.textContent = result;
+
+  console.log(result);
 });
