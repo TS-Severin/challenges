@@ -32,10 +32,23 @@ form.addEventListener("submit", (event) => {
   // --v-- write your code here --v--
 
   if (tosCheckbox.checked === false) {
-    return showTosError();
-  } else {
-    alert("Form submitted");
+    showTosError();
+    return;
   }
 
+  alert("Form submitted");
+
   // --^-- write your code here --^--
+});
+
+tosCheckbox.addEventListener("change", (event) => {
+  event.preventDefault();
+  const isChecked = tosCheckbox.checked;
+
+  if (!isChecked) {
+    showTosError();
+    return;
+  } else {
+    hideTosError();
+  }
 });
