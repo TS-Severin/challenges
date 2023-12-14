@@ -32,4 +32,7 @@ radiusRange.addEventListener("input", (event) => {
   box.style.borderRadius = `${borderValue}px`;
 });
 
-rotationRange.addEventListener("input", (event) => {});
+rotationRange.addEventListener("input", (event) => {
+  const rotationValue = rotationRange.value;
+  box.style.transform = `rotate(${rotationValue}deg)`;
+});
