@@ -2,24 +2,21 @@ console.clear();
 
 const starContainer = document.querySelector('[data-js="star-container"]');
 
-function renderStars(filledStars) {
+function renderStars(filleStars) {
   starContainer.innerHTML = "";
 
   let counter = 1;
   while (counter <= 5) {
     var img = document.createElement("img");
-    img.addEventListener("click", (event) => {
-      console.log("works!");
-    });
     starContainer.append(img);
     img.src = "assets/star-empty.svg";
 
-    if (counter <= filledStars) {
-      img.src = "assets/star-filled.svg";
-    } else {
-      img.src = "assets/star-empty.svg";
-    }
-    counter++;
+    img.addEventListener("click", (event) => {
+      if (counter <= filledStars) {
+        img.src = "assets/star-filled.svg";
+      }
+    });
   }
 }
-renderStars(3);
+
+renderStars();
