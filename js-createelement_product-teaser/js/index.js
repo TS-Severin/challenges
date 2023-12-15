@@ -51,3 +51,9 @@ newArticle.innerHTML = `
     </article>
   
   `;
+
+const buyButton = newArticle.querySelector("button");
+
+buyButton.addEventListener("click", (event) => {
+  console.log(`${name} ${price}`);
+});
