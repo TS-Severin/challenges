@@ -58,6 +58,24 @@ scndNewPostContent.classList.add("post__content");
 scndNewPostContent.textContent = "hello world";
 scndNewPostSection.append(scndNewPostContent);
 
+const scndNewPostFooter = document.createElement("footer");
+scndNewPostFooter.classList.add("post__footer");
+scndNewPostSection.append(scndNewPostFooter);
+
+const scndNewUsername = document.createElement("span");
+scndNewUsername.classList.add("post__username");
+scndNewUsername.textContent = "@secondNewUser";
+scndNewPostFooter.append(scndNewUsername);
+
+const scndNewLikeButton = document.createElement("button");
+scndNewLikeButton.classList.add("post__button");
+scndNewLikeButton.textContent = "<3 Like";
+scndNewPostFooter.append(scndNewLikeButton);
+
+scndNewLikeButton.addEventListener("click", (event) => {
+  handleLikeButtonClick(event);
+});
+
 /* <section class="post">
 <p class="post__content">
   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
