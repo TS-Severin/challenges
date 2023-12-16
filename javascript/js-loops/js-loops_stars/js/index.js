@@ -2,18 +2,20 @@ console.clear();
 
 const starContainer = document.querySelector('[data-js="star-container"]');
 
-function renderStars(filleStars) {
+function renderStars(filledStars) {
   starContainer.innerHTML = "";
 
-  let counter = 1;
-  while (counter <= 5) {
+  for (let count = 1; count <= 5; count++) {
     var img = document.createElement("img");
-    starContainer.append(img);
     img.src = "assets/star-empty.svg";
-
+    starContainer.append(img);
     img.addEventListener("click", (event) => {
-      if (counter <= filledStars) {
-        img.src = "assets/star-filled.svg";
+      // mein Versuch (der macht immer den 5. filled)
+      // if (count <= filledStars) {
+      //   img.src = "assets/star-filled.svg";
+      // chat gpt
+      for (let i = 1; i <= count; i++) {
+        starContainer.children[i - 1].src = "assets/star-filled.svg";
       }
     });
   }
