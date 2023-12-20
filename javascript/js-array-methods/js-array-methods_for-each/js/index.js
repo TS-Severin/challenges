@@ -19,4 +19,20 @@ const colors = [
   "#A5A5A5",
 ];
 
-colors.forEach();
+colors.forEach((color) => {
+  console.log(color);
+  const colorBox = document.createElement("div");
+  colorBox.classList.add("color-box");
+  colorBox.style.backgroundColor = color;
+  document.body.append(colorBox);
+});
+
+/*
+## Task 2
+
+Instead of writing the callback function directly inside the forEach method, we can use a function reference.
+
+- Create a new function called `renderColorBox`.
+- Copy your code from the arrow function into this new function.
+- Use the forEach method with renderColorBox to create the color boxes a second time!
+*/
