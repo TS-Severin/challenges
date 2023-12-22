@@ -13,6 +13,6 @@ function showWelcomeMessage() {
 
 handleUserLogin(showWelcomeMessage);
 
-handleUserLogin(function () {
-  console.log("Welcome! You are logged in now.");
+handleUserLogin(() => {
+  showWelcomeMessage();
 });
