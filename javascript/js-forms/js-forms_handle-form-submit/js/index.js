@@ -20,17 +20,9 @@ form.addEventListener("submit", (event) => {
   event.target.reset();
   event.target.elements.firstName.focus();
 
-  // ## Bonus: Calculate and log the age-badness-sum 🤷‍♀️
-
-  // The formula is: `age + badness`
-
-  // Log to the console _(replace the values between the quotes)_:
-
-  // > The age-badness-sum of "firstName" is "age-badness-sum"
-
   function calculateAgeBadnessSum() {
-    const ageNumeric = parseFloat(age); // I was stuck here: chat gpt helped me with parseFloat
-    const badnessNumeric = parseFloat(badness); // parseFloat makes the function handle the data as numbers, otherwise it woud be 4 number like: 3556 (age+badness)
+    const ageNumeric = parseFloat(age);
+    const badnessNumeric = parseFloat(badness);
 
     return ageNumeric + badnessNumeric;
   }
