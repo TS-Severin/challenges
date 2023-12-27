@@ -34,3 +34,4 @@ document.addEventListener("scroll", (event) => {
   const scrollPercentageRound = calculateScrollPercentage();
   progressBar.style.width = `${scrollPercentageRound}%`;
 });
+

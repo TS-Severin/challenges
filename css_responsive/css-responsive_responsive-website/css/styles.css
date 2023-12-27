@@ -247,7 +247,62 @@ width, etc. */
 /* Replace this comment with your media query. */
 /* --- */
 
+@media screen and (min-width: 800px) {
+  /* makes images round about half size of the screen to allow them be smaller */
+
+  .card-section > * {
+    width: 45%;
+  }
+
+  /* make the images which arrived at the breakpoint in a smaller version wrap in a row and be in center */
+
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* puts intro text at the top of box not in the center as in wireframe */
+
+  p.intro-text {
+    align-self: flex-start;
+  }
+}
+
 /* Media Query Desktop */
 /* --- */
+
+/* put the forest-image .product-card --forest to the whole width of the screen and makes it higher (500px) */
+
+@media screen and (min-width: 1200px) {
+  .product-card.--forest {
+    width: 100vw;
+    height: 500px;
+  }
+
+  /* makes the body slim or to put it in another way adds the green background left and right and centers the content 
+  it inherits the row-wrap from the defintions above for tablet */
+
+  body,
+  .main-header,
+  .navbar {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* kills the padding between forest-image and header */
+
+  .main-content {
+    padding-top: 0;
+  }
+
+  /* kills shadows of the forest behind the header, adds padding between main-section and footer */
+
+  .card-section {
+    overflow-x: hidden;
+    padding-bottom: 50px;
+  }
+}
+
 /* Replace this comment with your media query. */
 /* --- */
