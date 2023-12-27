@@ -21,32 +21,17 @@ For that:
 
 const progressBar = document.querySelector('[data-js="progress-bar"]');
 
-document.body.addEventListener('scroll', ()) => {
+const totalHeight = document.body.clientHeight - window.innerHeight;
 
-//   updateProgressbarWidth();
+const scrollPercentage = (window.scrollY / totalHeight) * 100;
 
+function calculateScrollPercentage() {
+  const scrollPercentage = (window.scrollY / totalHeight) * 100;
+  return Math.round(scrollPercentage);
 }
 
-console.log(window.innerHeight);
-console.log(document.body.clientHeight);
+document.addEventListener("scroll", (event) => {
+  const scrollPercentageRound = calculateScrollPercentage();
+  progressBar.style.width = `${scrollPercentageRound}%`;
+});
 
-// function updateProgressbarWidth() {
-// const calculateScrollPercentage() = progress-bar.width;
-// }
-
-// function calculateScrollPercentage() {
-//   const scrollHeightOnePercent = (document.body.clientHeight - window.innerHeight) / 100;
-//   return Math.round(window.scrollY / scrollHeightOnePercent);
-// }
-
-// const progressBar = document.querySelector('[data-js="progress-bar"]');
-
-// document.body.addEventListener('scroll', () => {
-//   const scrollPercentage = calculateScrollPercentage();
-//   progressBar.style.width = `${scrollPercentage}%`;
-// });
-
-// function calculateScrollPercentage() {
-//   const scrollHeightOnePercent = (document.body.clientHeight - window.innerHeight) / 100;
-//   return (window.scrollY / scrollHeightOnePercent).toFixed(2); // Using toFixed to limit decimal places
-// }
