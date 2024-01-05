@@ -125,6 +125,8 @@ console.log(indexOfAnimalWithNameLongerFive);
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy (and the tests work).
 
+// sort alphabetically by name
+
 const animalsSortedAlphabetically = animals.slice().sort((a, b) => {
   const animalA = a.name;
   const animalB = b.name;
@@ -139,7 +141,21 @@ const animalsSortedAlphabetically = animals.slice().sort((a, b) => {
 
 console.log(animalsSortedAlphabetically);
 
-const animalsSortedByWeightStartingWithLowest = null;
+// sort by weight
+
+const animalsSortedByWeightStartingWithLowest = animals.slice().sort((a, b) => {
+  const weightA = a.weight;
+  const weightB = b.weight;
+  if (weightA < weightB) {
+    return -1;
+  }
+  if (weightA > weightB) {
+    return 1;
+  }
+  return 0;
+});
+
+console.log(animalsSortedByWeightStartingWithLowest);
 
 const animalsSortedByWeightReversed = null;
 
