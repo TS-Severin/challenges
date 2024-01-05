@@ -77,8 +77,38 @@ const animals = [
   { name: "rhino", weight: 2000, continents: ["Asia", "Africa"] },
 ];
 
+/*
+## Task
+
+In the `./index.js` file, there is an `animals` array with - guess what? - animals. Each animal is an object with some key-value-pairs.
+
+Below this array, you will find a couple of variables (e.g. `firstAnimalStartingWithLetterG`). They all are initialized with `null`.
+
+And now it's your turn: delete the value `null` and write code such that the variables have a value corresponding to their name. Use the following methods to achieve this goal:
+
+- `Array.includes()`
+- `Array.find()`
+- `Array.findIndex()`
+- `Array.sort()`
+- `Array.some()`
+- `Array.every()`
+- `Array.reduce()`
+- `Array.reverse()`
+
+Additionally, at some point you will need:
+
+- `Array.filter()`
+- `Array.map()`
+- `String.startsWith()`
+
+You will find some hints as comments.
+*/
+
 // Hint: Besides the array method, check out the string method `startsWith()`.
-const firstAnimalStartingWithLetterG = null;
+const firstAnimalStartingWithLetterG = animals.find((animal) =>
+  animal.name.startsWith("g")
+);
+console.log(firstAnimalStartingWithLetterG);
 
 const indexOfAnimalWithNameLongerFive = null;
 
