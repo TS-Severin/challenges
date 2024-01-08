@@ -1,5 +1,19 @@
 console.clear();
 
+/*
+## Task
+
+Animate the relay runners along the race track using the `animateRunner()` function.
+
+The first runner can start immediately after the "🏁 Start race" button was clicked.
+
+The second runner should start after the first runner has reached them (in other words: when the first animation has finished).
+
+The same goes for the third runner in relation to the second one.
+
+Switch to the `./js/index.js` file and update the code in the click handler!
+*/
+
 const runner1 = document.querySelector('[data-js="runner"]:nth-of-type(1)');
 const runner2 = document.querySelector('[data-js="runner"]:nth-of-type(2)');
 const runner3 = document.querySelector('[data-js="runner"]:nth-of-type(3)');
@@ -24,6 +38,14 @@ startRaceButton.addEventListener("click", () => {
    **/
 
   // --v-- write your code here --v--
+
+  async function startRace() {
+    const startRunner1 = await animateRunner(runner1);
+    const startRunner2 = await animateRunner(runner2);
+    const startRunner3 = await animateRunner(runner3);
+  }
+
+  startRace();
 
   // --^-- write your code here --^--
 
