@@ -56,12 +56,10 @@ export const [student1, [student2, student3], [student4, student5]] =
 
 const values = [1, 6, 7, 9, 12, 5, 4];
 
-const result = add(...values);
+export const result = add(...values);
 
 function add(...values) {
   return values.reduce(
     (previousValue, currentValue) => previousValue + currentValue
   );
 }
-
-export default result;
