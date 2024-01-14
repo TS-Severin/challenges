@@ -5,12 +5,23 @@ import { checkFilteredNews, checkSortedNews } from "./utils/results.js";
 const container = document.querySelector('[data-js="card-container"]');
 
 // Part 1 - start here
-const filteredNews = news.filter(() => {
-  return true;
-});
+/*
+### Part 1: Filter
+
+- filter all cards which have the category "politics" in their category array
+- to do so, use the `includes` method on `card.categories`
+- don't forget to remove the return statement because you don't need it.
+*/
+const filteredNews = news.filter((card) =>
+  card.categories.includes("politics")
+);
 
 // Part 2 - start here
-const sortedNews = filteredNews;
+/*
+### Part 2: Sort
+Use the sort method to sort all filtered cards by the length of their body text.
+*/
+const sortedNews = filteredNews.sort((a, b) => a.body.length - b.body.length);
 
 sortedNews.forEach((news) => {
   const cardElement = Card(news);
