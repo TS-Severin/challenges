@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  HelloWorld();
+  return <HelloWorld />;
 }
 
 // - In the [App.js](src/App.js), create a new function called `HelloWorld()` (it does not matter whether you write it above or below the `App` function - but not inside it!).
