@@ -1,7 +1,11 @@
 import "./styles.css";
 
-export default function App(props) {
-  return <div>{props}</div>;
+export default function App() {
+  return <Greeting name="Marcel" />;
+}
+
+function Greeting({ name }) {
+  return <div>{name === "Marcel" ? "Hello Coach" : `Hello ${name}`}</div>;
 }
 
 // ### Create a Component with props
