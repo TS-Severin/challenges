@@ -1,0 +1,8 @@
+.footer {
+  margin-bottom: 0;
+  background-color: var(--color-granite);
+  color: var(--color-foam);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-weight: 500;
+}

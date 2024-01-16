@@ -1,0 +1,11 @@
+.createbutton {
+  background-color: var(--color-nemo);
+  width: 150px;
+  color: var(--color-foam);
+  align-self: center;
+  margin: 20px;
+}
+
+.createbutton:hover {
+  background-color: var(--color-nemo-dark);
+}
