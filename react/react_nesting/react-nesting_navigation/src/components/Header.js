@@ -1,3 +1,11 @@
+export default function Header({ children }) {
+  return (
+    <>
+      <header className="header">{children}</header>
+    </>
+  );
+}
+
 // ### 1. Header component
 
 // Task: Outsource the `<header>` into a `Header` component.
