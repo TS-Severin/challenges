@@ -1,9 +1,5 @@
-export default function Image(src, alt) {
-  return (
-    <img src={src} alt={alt} className="round-image">
-      Image
-    </img>
-  );
+export default function Image({ src, alt }) {
+  return <img className="round-image" src={src} alt={alt}></img>;
 }
 
 // ### 4. Image component
