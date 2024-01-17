@@ -10,17 +10,17 @@ export default function App() {
     {
       id: 24008,
       name: "Apple",
-      color: "red",
+      color: "green",
     },
     {
       id: 24009,
       name: "Kiwi",
-      color: "greenishbrownsomething",
+      color: "green",
     },
     {
       id: 24010,
       name: "orange",
-      color: "orange",
+      color: "red",
     },
     {
       id: 24011,
