@@ -1,0 +1,22 @@
+.date {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.titlecnt {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-size: 1rem;
+}
+
+.favicon {
+  width: 1.5rem;
+}
+
+.text {
+  text-align: left;
+  padding-bottom: 20px;
+  border-bottom: solid 1px var(--color-water-10);
+}
