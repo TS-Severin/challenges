@@ -7,7 +7,7 @@ export default function App() {
 
 function Article() {
   return (
-    <article>
+    <article className="article">
       <h2 className="article__title">h2</h2>
       <label htmlFor="inputfield">inputfield</label>
       <input name="inputfield" id="inputfield" />
