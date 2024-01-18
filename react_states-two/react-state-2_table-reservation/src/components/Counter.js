@@ -1,3 +1,6 @@
+// receiving functions as props
+// adding onClick functionality which triggers respective function as prop
+
 export default function Counter({ onAddPeople, onRemovePeople }) {
   return (
     <>
