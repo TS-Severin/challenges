@@ -5,7 +5,7 @@ export default function Entry({ date, favIcon }) {
     <>
       <div className="date">{date}</div>
       <div className="titlecnt">
-        <h2 className="title">"That's life in the city"</h2>
+        <h2 className="title">That is life in the city</h2>
         <img className="favicon" src={favIcon} alt="button for favorites" />
       </div>
       <p className="text">
