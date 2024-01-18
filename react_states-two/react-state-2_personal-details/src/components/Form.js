@@ -1,11 +1,16 @@
-import { useState } from "react";
+// functin receives function onCreateUser as a prop from Apps.js
 
-export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
+export default function Form({ onCreateUser }) {
   function handleSubmit(event) {
     event.preventDefault();
+    // function creates the data name and email from the form below
+    const form = event.target;
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    // calls the prop-function from App.js and passes the created data name and email as arguments (lifts up)
+    onCreateUser(name, email);
+
+    event.target.reset();
   }
 
   return (
