@@ -46,21 +46,20 @@ export default function EntriesSection() {
           Favorites <Badge>1</Badge>
         </Tab>
       </Tabs>
+
       <div className="entries-section__entries">
         {entries &&
-          entries.map((entry) => (
-            <div>
-              <>
+          entries.map((entry, index) => (
+            <>
               <Entry
                 date={entry.date}
                 motto={entry.motto}
                 notes={entry.notes}
                 key={entry.id}
               />
-              <Divider />
-          
+              {index !== entries.length - 1 && <Divider />}
+            </>
           ))}
-          </>
       </div>
     </section>
   );
