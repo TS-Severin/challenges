@@ -1,18 +1,25 @@
-import star from "../img/star.svg";
+import { useState } from "react";
+import { ReactComponent as StarFilled } from "../img/star-filled.svg";
+import { ReactComponent as Star } from "../img/star.svg";
 
-export default function Entry({ date, favIcon }) {
+export default function Entry({ date, title, notes }) {
+  const [isFavorite, setIsFavorite] = useState(false);
   return (
     <>
       <div className="date">{date}</div>
       <div className="titlecnt">
-        <h2 className="title">That is life in the city</h2>
-        <img className="favicon" src={favIcon} alt="button for favorites" />
+        <h2 className="title">{title}</h2>
+        <button
+          onClick={() => {
+            setIsFavorite(!isFavorite);
+            console.log("favorite button clicked");
+          }}
+          aria-label="favorite"
+        >
+          {isFavorite ? <StarFilled /> : <Star />}
+        </button>
       </div>
-      <p className="text">
-        Si sine causa? quae fuerit causa, mox videro interea hoc tenebo, si
-        mihi. Et quidem se repellere, idque instituit docere sic omne animal,
-        simul atque.
-      </p>
+      <p className="text">{notes}</p>
     </>
   );
 }
