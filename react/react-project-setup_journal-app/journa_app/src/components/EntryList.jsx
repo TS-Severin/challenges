@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Entry from "./Entry";
 
 const entries = [
@@ -31,6 +32,11 @@ const entries = [
 ];
 
 export default function EntryList() {
+  const entries = entries.map((entry) => {
+    entry;
+    console.log(entries);
+  });
+
   return (
     <>
       <ul className="entrylist">
