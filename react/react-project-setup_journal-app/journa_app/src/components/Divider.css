@@ -1,0 +1,4 @@
+.divider {
+  border-bottom: solid 1px var(--color-water-10);
+  margin-bottom: 15px;
+}
