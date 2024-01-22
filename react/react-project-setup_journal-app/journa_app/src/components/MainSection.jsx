@@ -44,7 +44,9 @@ export default function MainSection() {
     newEntry.date = date;
     newEntry.id = id;
     setEntries([newEntry, ...entries]);
+    console.log(newEntry);
   }
+
   return (
     <>
       <EntryForm onAddEntry={handleAddEntry} />

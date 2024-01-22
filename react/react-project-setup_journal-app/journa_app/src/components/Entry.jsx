@@ -2,13 +2,13 @@ import { useState } from "react";
 import { ReactComponent as StarFilled } from "../img/star-filled.svg";
 import { ReactComponent as Star } from "../img/star.svg";
 
-export default function Entry({ entries }) {
+export default function Entry({ entry }) {
   const [isFavorite, setIsFavorite] = useState(false);
   return (
-    <li key={entries.id}>
-      <div className="date">{entries.date}</div>
+    <li key={entry.id}>
+      <div className="date">{entry.date}</div>
       <div className="titlecnt">
-        <h2 className="title">{entries.motto}</h2>
+        <h2 className="title">{entry.motto}</h2>
         <button
           className="button"
           onClick={() => {
@@ -20,7 +20,7 @@ export default function Entry({ entries }) {
           {isFavorite ? <StarFilled /> : <Star />}
         </button>
       </div>
-      <p className="text">{entries.notes}</p>
+      <p className="text">{entry.notes}</p>
     </li>
   );
 }
