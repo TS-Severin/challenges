@@ -25,6 +25,8 @@ const user = { name: "John", years: 30 };
 
 export const { name, years: age, isAdmin = false } = user;
 
+console.log(user);
+
 // EXERCISE 3
 // Extract the variables from the dog object and
 // rename them like "dogName", "dogBreed", and "dogAge", respectively.
