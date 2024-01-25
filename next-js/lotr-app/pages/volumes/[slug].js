@@ -17,7 +17,7 @@ export default function VolumeDetail() {
   if (!currentVolume) {
     return (
       <>
-        <h1>This volume doesn't exist</h1>
+        <h1>This volume does not exist</h1>
         <Link href="/volumes">← All Volumes</Link>
       </>
     );
