@@ -1,6 +1,7 @@
 import "./List.css";
 
 export default function List({ animals }) {
+  console.log("inside list component: ", animals);
   return (
     <>
       <h2>Your animals:</h2>
