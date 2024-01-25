@@ -1,23 +1,18 @@
+import { getRandomColor } from "./utils/randomColor.js";
+import Circle from "./components/Circle/Circle.js";
+import Square from "./components/Square/Square.js";
+import Pentagon from "./components/Pentagon/Pentagon.js";
+
 console.clear();
 
 const root = document.getElementById("root");
 
-const circle = document.createElement("div");
-circle.classList.add("circle");
-circle.addEventListener("click", () => {
-  circle.style.backgroundColor = "#ccc";
-});
+// the three function defined in the corresponding folders are called with the actual function getRandomColor as an argument => the function is imported above
 
-const square = document.createElement("div");
-square.classList.add("square");
-square.addEventListener("click", () => {
-  square.style.backgroundColor = "#ccc";
-});
+const circleElement = Circle(getRandomColor);
 
-const pentagon = document.createElement("div");
-pentagon.classList.add("pentagon");
-pentagon.addEventListener("click", () => {
-  pentagon.style.backgroundColor = "#ccc";
-});
+const squareElement = Square(getRandomColor);
 
-root.append(circle, square, pentagon);
+const pentagonElement = Pentagon(getRandomColor);
+
+root.append(circleElement, squareElement, pentagonElement);
