@@ -57,5 +57,7 @@ export default createGlobalStyle`
       background-color: #282828; 
       color:  #f1f1f1; 
     }  
+
+    
   }
 `;
