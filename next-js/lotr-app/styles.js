@@ -48,7 +48,7 @@ export default createGlobalStyle`
   }
 
   body {
-    margin: 0;
+    margin: 35px;
     font-family: var(--font-family);
   }
 `;
