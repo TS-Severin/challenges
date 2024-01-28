@@ -55,30 +55,36 @@ export default function VolumeDetail() {
             height={230}
           />
         </VolumeContainer>
-        {index > 0 && (
-          <Link href={`/volumes/${volumes[index - 1].slug}`}>
-            <ArrowLeft />
-            Previous Volume: {volumes[index - 1].title}
-          </Link>
-        )}
-        {index < volumes.length - 1 && (
-          <Link href={`/volumes/${volumes[index + 1].slug}`}>
-            Next Volume: {volumes[index + 1].title} <ArrowRight />
-          </Link>
-        )}
+        <FooterNavBarContainer>
+          <PrevLink>
+            {index > 0 && (
+              <StyledLink href={`/volumes/${volumes[index - 1].slug}`}>
+                <ArrowLeft />
+                <FooterLink>
+                  <BookOrdinal>Previous Volume:</BookOrdinal>
+                  <FooterParagraph>{volumes[index - 1].title}</FooterParagraph>
+                </FooterLink>
+              </StyledLink>
+            )}
+          </PrevLink>
+          <NextLink>
+            {index < volumes.length - 1 && (
+              <StyledLink href={`/volumes/${volumes[index + 1].slug}`}>
+                <FooterLink>
+                  <BookOrdinal>Next Volume:</BookOrdinal>
+                  <FooterParagraph>
+                    {volumes[index + 1].title}
+                  </FooterParagraph>{" "}
+                </FooterLink>
+                <ArrowRight />
+              </StyledLink>
+            )}
+          </NextLink>
+        </FooterNavBarContainer>
       </>
     );
   }
 }
-
-const VolumeContainer = styled.div`
-  background-color: ${({ $bgColor }) => $bgColor};
-  display: flex;
-  flex-direction: row;
-  color: white;
-  gap: 15px;
-  padding: 20px;
-`;
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -90,6 +96,18 @@ const StyledLink = styled.a`
 
 const StyledHeadline1 = styled.h1`
   font: var(--font-headline-1);
+`;
+
+const VolumeContainer = styled.div`
+  background-color: ${({ $bgColor }) => $bgColor};
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  gap: 15px;
+  padding: 20px 35px;
+  margin-left: -35px;
+  margin-right: -35px;
 `;
 
 const StyledParagraph = styled.p`
@@ -105,17 +123,43 @@ const StyledListItem = styled.li`
   margin-bottom: 20px;
 `;
 
-const VolumeImage = styled.img``;
+const VolumeImage = styled.img`
+  box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.3);
+`;
+
+// Footer Styling, next and prev-Link
+
+const FooterNavBarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+`;
 
 const BookOrdinal = styled.p`
   font: var(--font-caption--italic);
   line-height: 0;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 `;
 
 const BookTitle = styled.p`
   font: var(--font-caption);
+  font-size: 0.8rem;
 `;
+
+const FooterLink = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const FooterParagraph = styled.p`
+  line-height: 0.9;
+  padding: 0;
+  margin: 0;
+`;
+
+const PrevLink = styled.div``;
+
+const NextLink = styled.div``;
 
 // --font-headline-1: normal 700 44px/48px var(--font-family);
 // --font-headline-2: normal 700 32px/41px var(--font-family);

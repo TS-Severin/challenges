@@ -51,4 +51,11 @@ export default createGlobalStyle`
     margin: 35px;
     font-family: var(--font-family);
   }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #282828; 
+      color:  #f1f1f1; 
+    }  
+  }
 `;
