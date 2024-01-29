@@ -55,10 +55,10 @@ export default createGlobalStyle`
   }
 
   @media (prefers-color-scheme: dark) {
+    body {
 
     background-color: var(--color-earth);
-    color: var(--color-clouds)
-
-    
+    color: var(--color-clouds);
   }
+}
 `;

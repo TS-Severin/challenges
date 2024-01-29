@@ -75,6 +75,20 @@ const VolumeImage = styled.img`
   &:hover {
     box-shadow: var(--box-shadow-book--hover);
   }
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0 4px 8px -2px rgba(255, 255, 255, 0.09),
+      0 7px 4px -4px rgba(255, 255, 255, 0.07),
+      0 16px 8px -8px rgba(255, 255, 255, 0.07),
+      0 22px 12px -12px rgba(255, 255, 255, 0.07),
+      0 2px 10px 0 rgba(255, 255, 255, 0.06);
+    &:hover {
+      box-shadow: 0 6px 11px -2px rgba(255, 255, 255, 0.12),
+        0 8px 7px -4px rgba(255, 255, 255, 0.09),
+        0 17px 11px -8px rgba(255, 255, 255, 0.09),
+        0 24px 15px -12px rgba(255, 255, 255, 0.09),
+        0 4px 15px 0 rgba(255, 255, 255, 0.05);
+    }
+  }
 `;
 
 const StyledLink = styled.a`
