@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
   return (
     <Layout>
       <GlobalStyle />
-      <Component {...pageProps} handleToggle={handleToggle} lights={lights} />
+      <Component {...pageProps} toggleLight={handleToggle} lights={lights} />
     </Layout>
   );
 }
