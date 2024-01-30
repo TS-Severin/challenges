@@ -23,10 +23,33 @@ export default function App({ Component, pageProps }) {
     setLights(updatedLightArray);
   }
 
+  const lightsOnCount = lights.filter((light) => light.isOn).length;
+
+  function handleTurnAllLightsOff() {
+    const lightsOff = lights.map((light) => ({ ...light, isOn: false }));
+    setLights(lightsOff);
+  }
+
+  function handleTurnAllLightsOn() {
+    const allLightsOn = lights.map((light) => ({ ...light, isOn: true }));
+    setLights(allLightsOn);
+  }
+
+  const isDimmed = lights.every((light) => light.isOn === false);
+  console.log("Dimmed????????", isDimmed);
+
   return (
     <Layout>
       <GlobalStyle />
-      <Component {...pageProps} toggleLight={handleToggle} lights={lights} />
+      <Component
+        {...pageProps}
+        toggleLight={handleToggle}
+        lights={lights}
+        lightsOnCount={lightsOnCount}
+        onTurnAllLightsOff={handleTurnAllLightsOff}
+        onTurnAllLightsOn={handleTurnAllLightsOn}
+        isDimmed={isDimmed}
+      />
     </Layout>
   );
 }
