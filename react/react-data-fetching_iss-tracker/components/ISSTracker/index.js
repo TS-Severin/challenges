@@ -8,7 +8,7 @@ import useSWR from "swr";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function ISSTracker() {
-  const { data, error, isLoading } = useSWR(
+  const { data, error, isLoading, mutate } = useSWR(
     "https://api.wheretheiss.at/v1/satellites/25544",
     fetcher
   );
@@ -17,6 +17,9 @@ export default function ISSTracker() {
 
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
+
+  // - Destructure the `mutate` function provided by the `useSWR` hook.
+  // - Pass it to the `onRefresh` prop of the `Controls` component. You can use an inline function as in `onReload={() => handleReload()}`.
 
   // commented out code without useSWR:
 
@@ -53,7 +56,7 @@ export default function ISSTracker() {
       <Controls
         longitude={data.longitude}
         latitude={data.latitude}
-        // onRefresh={getISSCoords}
+        onRefresh={() => mutate()}
       />
     </main>
   );
