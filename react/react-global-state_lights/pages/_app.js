@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }) {
   console.log("Dimmed????????", isDimmed);
 
   return (
-    <Layout>
+    <Layout isDimmed={isDimmed}>
       <GlobalStyle />
       <Component
         {...pageProps}

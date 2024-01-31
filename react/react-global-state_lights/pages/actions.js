@@ -1,7 +1,12 @@
 import Link from "../components/Link";
 import QuickActions from "../components/QuickActions";
 
-export default function Actions({ onTurnAllLightsOff, onTurnAllLightsOn }) {
+export default function Actions({
+  onTurnAllLightsOff,
+  onTurnAllLightsOn,
+  isDimmed,
+  lights,
+}) {
   return (
     <>
       <Link href="/">← Back home</Link>
@@ -9,6 +14,8 @@ export default function Actions({ onTurnAllLightsOff, onTurnAllLightsOn }) {
       <QuickActions
         onTurnAllLightsOff={onTurnAllLightsOff}
         onTurnAllLightsOn={onTurnAllLightsOn}
+        isDimmed={isDimmed}
+        lights={lights}
       />
     </>
   );
