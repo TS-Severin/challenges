@@ -10,11 +10,29 @@ export default function Form() {
     },
   });
 
-  function handleNameChange(event) {}
+  function handleNameChange(event) {
+    console.log("---> Name");
+    console.log(event.target.value);
+    setMountain({ name: event.target.value, values: { ...mountain.values } });
+  }
 
-  function handleAltitudeChange(event) {}
+  function handleAltitudeChange(event) {
+    console.log("---> Altitude");
+    console.log(event.target.value);
+    setMountain({
+      ...mountain,
+      values: { ...mountain.values, altitude: event.target.value },
+    });
+  }
 
-  function handleMountainRangeChange(event) {}
+  function handleMountainRangeChange(event) {
+    console.log("---> Mountain Range");
+    console.log(event.target.value);
+    setMountain({
+      ...mountain,
+      values: { ...mountain.values, mountainRange: event.target.value },
+    });
+  }
 
   return (
     <StyledForm>
