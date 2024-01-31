@@ -1,8 +1,18 @@
-import { useState } from "react";
+// import { useState } from "react";
+import { useImmer } from "use-immer";
 import { StyledForm, StyledInputContainer } from "./Form.styled";
 
+// export default function Form() {
+//   const [mountain, setMountain] = useState({
+//     name: "Mount Everest",
+//     values: {
+//       altitude: 8848,
+//       mountainRange: "Himalayas",
+//     },
+//   });
+
 export default function Form() {
-  const [mountain, setMountain] = useState({
+  const [mountain, updateMountain] = useImmer({
     name: "Mount Everest",
     values: {
       altitude: 8848,
@@ -10,27 +20,51 @@ export default function Form() {
     },
   });
 
+  // function handleNameChange(event) {
+  //   console.log("---> Name");
+  //   console.log(event.target.value);
+  //   setMountain({ name: event.target.value, values: { ...mountain.values } });
+  // }
+
   function handleNameChange(event) {
     console.log("---> Name");
     console.log(event.target.value);
-    setMountain({ name: event.target.value, values: { ...mountain.values } });
+    updateMountain((draft) => {
+      draft.name = event.target.value;
+    });
   }
+
+  // function handleAltitudeChange(event) {
+  //   console.log("---> Altitude");
+  //   console.log(event.target.value);
+  //   setMountain({
+  //     ...mountain,
+  //     values: { ...mountain.values, altitude: event.target.value },
+  //   });
+  // }
 
   function handleAltitudeChange(event) {
     console.log("---> Altitude");
     console.log(event.target.value);
-    setMountain({
-      ...mountain,
-      values: { ...mountain.values, altitude: event.target.value },
+    updateMountain((draft) => {
+      draft.values.altitude = event.target.value;
     });
   }
+
+  // function handleMountainRangeChange(event) {
+  //   console.log("---> Mountain Range");
+  //   console.log(event.target.value);
+  //   setMountain({
+  //     ...mountain,
+  //     values: { ...mountain.values, mountainRange: event.target.value },
+  //   });
+  // }
 
   function handleMountainRangeChange(event) {
     console.log("---> Mountain Range");
     console.log(event.target.value);
-    setMountain({
-      ...mountain,
-      values: { ...mountain.values, mountainRange: event.target.value },
+    updateMountain((draft) => {
+      draft.values.mountainRange = event.target.value;
     });
   }
 
