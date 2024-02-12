@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Review from "./Review";
 
 const { Schema, models, model } = mongoose;
 
@@ -7,12 +8,9 @@ const productSchema = new Schema({
   description: { type: String, required: true },
   price: { type: Number, required: true },
   currency: { type: String, required: true },
+  reviews: { type: [Schema.Types.ObjectId], ref: Review },
 });
 
-const Product =
-  mongoose.models.Product || mongoose.model("Product", productSchema);
-
-// if mongoose.models.Joke exists it would be created anew
-// this function creates the model => joke is name of model, jokeSchema defines how it should look like
+const Product = models.Product || model("Product", productSchema);
 
 export default Product;

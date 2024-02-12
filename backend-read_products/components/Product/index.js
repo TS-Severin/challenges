@@ -9,6 +9,8 @@ export default function Product() {
 
   const { data, isLoading } = useSWR(`/api/products/${id}`);
 
+  console.log("DATA", data);
+
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -16,7 +18,8 @@ export default function Product() {
   if (!data) {
     return;
   }
-
+  console.log("DATA REVIEWS", data.reviews);
+  const reviews = data.reviews;
   return (
     <ProductCard>
       <h2>{data.name}</h2>
@@ -24,6 +27,9 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      <p>{reviews.map((review) => review.title)}</p>
+      <p>{reviews.map((review) => review.text)}</p>
+      <p>{reviews.map((review) => review.rating)}</p>
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
